@@ -1,0 +1,30 @@
+---
+title: "Peer-graded Assignment: Predict the risk of getting esophageal cancer"
+author: "Yang"
+date: "11/10/2021"
+output: ioslides_presentation
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## Overview of the app
+
+- This app is used to predict the risk of getting esophageal cancer.  
+- The linear regression prediction model is generated using the data from a case-control study of esophageal cancer in Ille-et-Vilaine, France.
+
+## Links and the source code
+- The "assignment" shiny application can be found in https://thefw21.shinyapps.io/Assignment/. 
+- the "ui.R" and "server.R" codes can be found in https://github.com/ccm111222/Course-Project-Shiny-Application-and-Reproducible-Pitch.
+https://thefw21.shinyapps.io/Assignment/.
+
+## Overview of the data of the esophageal cancer in Ille-et-Vilaine, France
+```{r, echo=TRUE}
+head(esoph)
+```
+
+## How to use the app
+1. The "assignment" shiny application needs 3 inputs: age, the average daily alcohol consumption (gram), and the average daily tobacco consumption (gram). You can enter these information from the left panel of the app.
+2. A multivariate linear regression will be run using the French esophageal cancer data, and a predicted risk of esophageal cancer (in proportion) will displayed, as well as the 95% confidence interval (CI).
+3. The original French esophageal cancer data (small dots), as well as the data point that you just entered (a big dot), will appear as a 3D scatter plot at the bottom right. The predicted risk of getting esophageal cancer is illustrated using the color of the dot.
